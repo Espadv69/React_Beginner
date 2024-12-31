@@ -22,7 +22,7 @@ const Button = ({ text }) => {
 }
 
 root.render(
-  <React.StrictMode>
+  <React.StrictMode> {/* This is a wrapper that helps with debugging */}
 
     {createButton({ text: 'button 1' })} {/* Imperative */}
     <Button text='button 2' /> {/* Declarative */}
