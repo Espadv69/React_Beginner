@@ -4,7 +4,7 @@ import ReactDom from 'react-dom'
 const root = ReactDom.createRoot(document.getElementById('root'))
 
 root.render(
-  <React.Fragment>
+  <React.StrictMode>
     <button>Hello button</button>
-  </React.Fragment>
+  </React.StrictMode>
 )
