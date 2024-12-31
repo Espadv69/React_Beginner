@@ -1,0 +1,11 @@
+{
+  "name": "react_beginner",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "00-hello-world"
+  ],
+  "scripts": {
+    "start:00-hello-world": "npm run dev --workspace=00-hello-world"
+  }
+}
