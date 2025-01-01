@@ -1,9 +1,9 @@
 import React from 'react';
-import createRoot from 'react-dom/client'
+import ReactDom from 'react-dom/client';
 import { TwitterFollowCard } from './components/TwitterFollowCard.jsx';
 import './main.css';
 
-createRoot.createRoot(document.getElementById('root')).render(
+ReactDom.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <section className='tw-followCard-container'>
       <TwitterFollowCard isFollowing fName={'Espada diaz'} username={'aitor69'} />
