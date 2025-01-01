@@ -7,6 +7,10 @@ const root = ReactDOM.createRoot(document.getElementById('root'))
 
 root.render(
   <React.StrictMode>
-    <TwitterFollowCard />
+    <section className='tw-followCard-container'>
+      <TwitterFollowCard fName={'Espada diaz'} username={'aitor69'} />
+      <TwitterFollowCard fName={'Domingo gonzalo'} username={'terminator'} />
+      <TwitterFollowCard fName={'Paco salinas'} username={'salinas'} />
+    </section>
   </React.StrictMode>
 )
