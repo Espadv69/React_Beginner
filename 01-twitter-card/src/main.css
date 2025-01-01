@@ -10,3 +10,9 @@ body {
   background-color: #121212;
   color: whitesmoke;
 }
+
+.tw-followCard-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
