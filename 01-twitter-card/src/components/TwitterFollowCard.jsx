@@ -1,6 +1,6 @@
 import '../css/TwitterFollowCard.css'
 
-export function TwitterFollowCard({ fName, username, isFollowing }) {
+export function TwitterFollowCard({ fullName, username, isFollowing }) {
   console.log(isFollowing)
   return (
     <article className='tw-followCard'>
@@ -11,7 +11,7 @@ export function TwitterFollowCard({ fName, username, isFollowing }) {
           alt="Avatar"
         />
         <div className='tw-followCard-info'>
-          <strong>{fName}</strong>
+          <strong>{fullName}</strong>
           <span className='tw-followCard-span'>@{username}</span>
         </div>
       </header>
