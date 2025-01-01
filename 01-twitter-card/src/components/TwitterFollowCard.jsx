@@ -1,7 +1,7 @@
 import '../css/TwitterFollowCard.css'
 
-export function TwitterFollowCard({ fullName, username, isFollowing }) {
-  console.log(isFollowing)
+export function TwitterFollowCard({ fullName, username, formatUsername, isFollowing }) {
+  // const addAt = (username) => `@${username}` // Add @ to the username, but there are other ways to do it
   return (
     <article className='tw-followCard'>
       <header className='tw-followCard-header'>
@@ -12,7 +12,7 @@ export function TwitterFollowCard({ fullName, username, isFollowing }) {
         />
         <div className='tw-followCard-info'>
           <strong>{fullName}</strong>
-          <span className='tw-followCard-span'>@{username}</span>
+          <span className='tw-followCard-span'>{formatUsername(username)}</span>
         </div>
       </header>
 
