@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "workspaces": [
-    "00-hello-world"
+    "00-hello-world",
+    "01-twitter-card"
   ],
   "scripts": {
     "start:00-hello-world": "npm run dev --workspace=00-hello-world"
