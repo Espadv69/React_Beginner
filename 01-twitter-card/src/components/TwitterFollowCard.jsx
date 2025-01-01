@@ -24,4 +24,5 @@ export function TwitterFollowCard({ fullName, username, isFollowing }) {
       </aside>
     </article>
   )
+  
 }
