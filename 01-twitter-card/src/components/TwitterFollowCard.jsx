@@ -17,6 +17,8 @@ export function TwitterFollowCard({ children, username }) {
 
   const handleClick = () => setIsFollowing(!isFollowing) // Internal state
   console.log(isFollowing)
+  console.log(username)
+  
   return (
     <article className='tw-followCard'>
       <header className='tw-followCard-header'>
