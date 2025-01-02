@@ -27,6 +27,10 @@
   opacity: .6;
 }
 
+.tw-follow-card-button-following {
+  display: block;
+}
+
 .tw-followCard-button {
   width: 100px;
   cursor: pointer;
@@ -52,4 +56,18 @@
 
 .is-following:hover {
   color: red;
+  background-color: rgba(114, 33, 33, 0.257);
+  border-color: red;
+}
+
+.tw-followCard-button.is-following:hover .tw-follow-card-button-following {
+  display: none;
+}
+
+.is-following:hover .tw-followCard-button-unfollow {
+  display: block;
+}
+
+.tw-followCard-button-unfollow {
+  display: none;
 }
