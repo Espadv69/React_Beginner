@@ -10,7 +10,7 @@ export function App() {
         Aitor Job { /* Children */ }
       </TwitterFollowCard>
 
-      <TwitterFollowCard isFollowing username={'terminator'}>
+      <TwitterFollowCard isFollowing={false} username={'terminator'}>
         Terminator Bom { /* Children */ }
       </TwitterFollowCard>
 
