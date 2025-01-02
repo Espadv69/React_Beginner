@@ -49,3 +49,7 @@
   border: 2px solid rgb(70, 70, 70);
   color: whitesmoke;
 }
+
+.is-following:hover {
+  color: red;
+}
