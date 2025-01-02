@@ -7,6 +7,7 @@ export function App() {
 
   const [username, setUsername] = useState('terminator._')
   const handleUsername = () => setUsername('pabloelmotos')
+  console.log('render with: ', username)
 
   return (
     <section className='tw-followCard-container'>
