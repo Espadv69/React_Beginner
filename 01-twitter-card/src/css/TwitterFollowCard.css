@@ -69,5 +69,6 @@
 }
 
 .tw-followCard-button-unfollow {
+  transition: all .2s ease;
   display: none;
 }
