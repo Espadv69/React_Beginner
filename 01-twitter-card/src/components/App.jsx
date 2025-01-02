@@ -3,7 +3,7 @@ import { TwitterFollowCard } from './TwitterFollowCard'
 
 export function App() {
   // We can pass the props in the same way as we did in the previous example.
-  const aitor = { username: 'aitor69' } // Bad practice
+  const aitor = { username: 'aitor69', initialIsFollowing: true } // Bad practice
 
   const [username, setUsername] = useState('terminator._')
   const handleUsername = () => setUsername('pabloelmotos')
