@@ -1,4 +1,9 @@
-function App() {
+const TURNS = {
+  X: 'X',
+  O: 'O'
+}
+
+function App() { 
 
   return (
     <>
