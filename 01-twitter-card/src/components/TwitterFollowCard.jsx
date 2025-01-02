@@ -3,6 +3,10 @@ import '../css/TwitterFollowCard.css'
 export function TwitterFollowCard({ children, username, isFollowing }) {
   // const addAt = (username) => `@${username}` // Add @ to the username, but there are other ways to do it
 
+  // Conditional rendering
+  const text = isFollowing ? 'Following' : 'Follow'
+  const classButton = isFollowing ? 'tw-followCard-button is-following' : 'tw-followCard-button'
+  
   return (
     <article className='tw-followCard'>
       <header className='tw-followCard-header'>
@@ -18,8 +22,8 @@ export function TwitterFollowCard({ children, username, isFollowing }) {
       </header>
 
       <aside>
-        <button className='tw-followCard-button'>
-          Follow
+        <button className={classButton}>
+          {text}
         </button>
       </aside>
     </article>
