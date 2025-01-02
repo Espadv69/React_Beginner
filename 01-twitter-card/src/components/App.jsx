@@ -1,7 +1,7 @@
 import { TwitterFollowCard } from './TwitterFollowCard'
 export function App() {
   // We can pass the props in the same way as we did in the previous example.
-  const aitor = { username: 'aitor69', isFollowing: true}
+  const aitor = { username: 'aitor69', isFollowing: true} // Bad practice
 
   return (
     <section className='tw-followCard-container'>
