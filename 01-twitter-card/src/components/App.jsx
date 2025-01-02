@@ -9,20 +9,42 @@ export function App() {
   const handleUsername = () => setUsername('pabloelmotos')
   console.log('render with: ', username)
 
+  const users = [
+    {
+      username: 'manolito',
+      name: 'Manolo',
+      isFollowing: false
+    },
+    {
+      username: 'pepito',
+      name: 'Pepe',
+      isFollowing: true
+    },
+    {
+      username: 'jorgito',
+      name: 'Jorge',
+      isFollowing: true
+    }
+  ]
+
   return (
     <section className='tw-followCard-container'>
 
       <TwitterFollowCard {...aitor}> {/* Spread operator */}
-        Aitor Job { /* Children */ }
+        Aitor Job { /* Children */}
       </TwitterFollowCard>
 
-      <TwitterFollowCard username={username}>
-        Terminator Bom { /* Children */ }
-      </TwitterFollowCard>
+      {
+        users.map(user => {
+          const { username, name, isFollowing } = user
+          return (
+            <TwitterFollowCard key={username} username={username} initialIsFollowing={isFollowing}>
+              {name}
+            </TwitterFollowCard>
+          )
+        })
+      }
 
-      <button onClick={handleUsername}>
-        Cambio de nombre
-      </button>
     </section>
   )
 
