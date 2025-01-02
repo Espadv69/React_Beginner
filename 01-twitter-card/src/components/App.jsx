@@ -1,23 +1,18 @@
 import { TwitterFollowCard } from './TwitterFollowCard'
 export function App() {
+  // We can pass the props in the same way as we did in the previous example.
+  const aitor = { username: 'aitor69', isFollowing: true}
 
   return (
     <section className='tw-followCard-container'>
 
-      <TwitterFollowCard
-        isFollowing
-        fullName={'Espada diaz'}
-        username={'aitor69'} />
+      <TwitterFollowCard {...aitor}> {/* Spread operator */}
+        Aitor Job { /* Children */ }
+      </TwitterFollowCard>
 
-      <TwitterFollowCard
-        isFollowing
-        fullName={'Domingo gonzalo'}
-        username={'terminator'} />
-
-      <TwitterFollowCard
-        isFollowing
-        fullName={'Paco salinas'}
-        username={'salinas'} />
+      <TwitterFollowCard isFollowing username={'terminator'}>
+        Terminator Bom { /* Children */ }
+      </TwitterFollowCard>
 
     </section>
   )
