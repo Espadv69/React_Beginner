@@ -1,11 +1,16 @@
 import '../css/TwitterFollowCard.css'
+import { useState } from 'react'
 
-export function TwitterFollowCard({ children, username, isFollowing }) {
+export function TwitterFollowCard({ children, username }) {
   // const addAt = (username) => `@${username}` // Add @ to the username, but there are other ways to do it
+
+  const [isFollowing, setIsFollowing] = useState(false)
 
   // Conditional rendering
   const text = isFollowing ? 'Following' : 'Follow'
   const classButton = isFollowing ? 'tw-followCard-button is-following' : 'tw-followCard-button'
+
+  const handleClick = () => setIsFollowing(!isFollowing) // Internal state
   
   return (
     <article className='tw-followCard'>
@@ -22,7 +27,7 @@ export function TwitterFollowCard({ children, username, isFollowing }) {
       </header>
 
       <aside>
-        <button className={classButton}>
+        <button className={classButton} onClick={handleClick}>
           {text}
         </button>
       </aside>
