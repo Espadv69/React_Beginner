@@ -4,10 +4,12 @@
   "private": true,
   "workspaces": [
     "00-hello-world",
-    "01-twitter-card"
+    "01-twitter-card",
+    "02-tic-tac-toe"
   ],
   "scripts": {
     "start:00-hello-world": "npm run dev --workspace=00-hello-world",
-    "start:01-twitter-card": "npm run dev --workspace=01-twitter-card"
+    "start:01-twitter-card": "npm run dev --workspace=01-twitter-card",
+    "start:02-tic-tac-toe": "npm run dev --workspace=02-tic-tac-toe"
   }
 }
