@@ -15,6 +15,9 @@ const Square = ({ children, updateBoard, index }) => {
 
 function App() {
   const [board, setBoard] = useState(Array(9).fill(null))
+  console.log(board)
+
+  const [turn, setTurn] = useState(TURNS.X)
 
   return (
     <main className="board">
@@ -27,11 +30,16 @@ function App() {
               <Square
                 key={index}
                 index={index}>
-                {index}
+                {board[index]}
               </Square>
             )
           })
         }
+      </section>
+
+      <section className='turn'>
+        <Square>{TURNS.X}</Square>
+        <Square>{TURNS.O}</Square>
       </section>
     </main>
   )
