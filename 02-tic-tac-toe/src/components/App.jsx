@@ -71,7 +71,7 @@ function App() {
     const newWinner = checkWinner(newBoard) // Check if there is a winner
     if (newWinner) {
       setWinner(newWinner) // Set the winner. This is not sinchronous
-    }
+    } // todo: check if game is over
   }
 
   return (
@@ -98,6 +98,30 @@ function App() {
         <Square isSelected={turn === TURNS.X}>{TURNS.X}</Square>
         <Square isSelected={turn === TURNS.O}>{TURNS.O}</Square>
       </section>
+
+      {
+        winner !== null && (
+          <section className='winner'>
+            <div className='text'>
+              <h2>
+                {
+                  winner === false
+                    ? 'Draw!'
+                    : 'Winner: '
+                }
+              </h2>
+
+              <header className='win'>
+                {winner && <Square>{winner}</Square>}
+              </header>
+
+              <footer>
+                <button>Restart</button>
+              </footer>
+            </div>
+          </section>
+        )
+      }
     </main>
   )
 
