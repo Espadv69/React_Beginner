@@ -59,7 +59,7 @@ function App() {
 
 
   const updateBoard = (index) => {
-    if (board[index]) return // If the square is already filled, return
+    if (board[index] || winner) return // If the square is already filled or there is a winner, return
 
     const newBoard = [...board] // Copy the board
     newBoard[index] = turn // Update the board with the current turn
@@ -70,7 +70,7 @@ function App() {
 
     const newWinner = checkWinner(newBoard) // Check if there is a winner
     if (newWinner) {
-      setWinner(newWinner) // Set the winner
+      setWinner(newWinner) // Set the winner. This is not sinchronous
     }
   }
 
