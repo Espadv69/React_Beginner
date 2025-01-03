@@ -110,18 +110,18 @@ function App() {
             <div className='text'>
               <h2>
                 {
-                  winner === false
-                    ? 'Draw!'
-                    : 'Winner: '
+                  winner === false // Check if the winner is false
+                    ? 'Draw!' // If the winner is false, display 'Draw!'
+                    : 'Winner:' // If the winner is not false, display 'Winner: '
                 }
               </h2>
 
               <header className='win'>
-                {winner && <Square>{winner}</Square>}
+                {winner && <Square>{winner}</Square>} {/* Add Square component to display the winner */}
               </header>
 
               <footer>
-                <button onClick={resetGame}>Restart</button>
+                <button onClick={resetGame}>Restart</button> {/* Add onClick event to the button */}
               </footer>
             </div>
           </section>
