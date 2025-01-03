@@ -22,10 +22,12 @@ const WINNER_COMBINATIONS = [
 const Square = ({ children, isSelected, updateBoard, index }) => {
   const className = `square ${isSelected ? 'is-selected' : ''}`
 
+  // Add handleClick function to update the board
   const handleClick = () => {
     updateBoard(index)
   }
 
+  // Add onClick event to the div
   return (
     <div onClick={handleClick} className={className}>
       {children}
@@ -35,14 +37,15 @@ const Square = ({ children, isSelected, updateBoard, index }) => {
 
 
 function App() {
-  const [board, setBoard] = useState(Array(9).fill(null))
+  const [board, setBoard] = useState(Array(9).fill(null)) // Add board state
 
-  const [turn, setTurn] = useState(TURNS.X)
+  const [turn, setTurn] = useState(TURNS.X) // Add turn state
 
-  const [winner, setWinner] = useState(null)
+  const [winner, setWinner] = useState(null) // Add winner state
   const checkWinner = (boardToCheck) => {
+
     for (const combo of WINNER_COMBINATIONS) {
-      const [a, b, c] = combo
+      const [a, b, c] = combo // Destructure the combo
       if (
         boardToCheck[a] && // Check if the value is not null
         boardToCheck[a] === boardToCheck[b] && // Check if the values are the same
@@ -51,18 +54,24 @@ function App() {
         return boardToCheck[a] // Return the winner
       }
     }
+
   }
 
 
   const updateBoard = (index) => {
-    if (board[index]) return
+    if (board[index]) return // If the square is already filled, return
 
-    const newBoard = [...board]
-    newBoard[index] = turn
-    setBoard(newBoard)
+    const newBoard = [...board] // Copy the board
+    newBoard[index] = turn // Update the board with the current turn
+    setBoard(newBoard) // Update the board
 
     const newTurn = turn === TURNS.X ? TURNS.O : TURNS.X
-    setTurn(newTurn)
+    setTurn(newTurn) // Change the turn
+
+    const newWinner = checkWinner(newBoard) // Check if there is a winner
+    if (newWinner) {
+      setWinner(newWinner) // Set the winner
+    }
   }
 
   return (
