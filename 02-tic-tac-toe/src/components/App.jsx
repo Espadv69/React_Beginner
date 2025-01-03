@@ -54,7 +54,12 @@ function App() {
         return boardToCheck[a] // Return the winner
       }
     }
+  }
 
+  const resetGame = () => {
+    setBoard(Array(9).fill(null)) // Reset the board
+    setTurn(TURNS.X) // Reset the turn
+    setWinner(null) // Reset the winner
   }
 
 
@@ -116,7 +121,7 @@ function App() {
               </header>
 
               <footer>
-                <button>Restart</button>
+                <button onClick={resetGame}>Restart</button>
               </footer>
             </div>
           </section>
