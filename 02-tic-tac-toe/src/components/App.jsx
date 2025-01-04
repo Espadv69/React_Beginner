@@ -2,6 +2,7 @@ import { useState } from 'react' // Import useState hook
 import confetti from 'canvas-confetti' // Import confetti library
 
 import { Square } from './Square.jsx' // Import Square component
+import { WinnerModal } from './WinnerModal.jsx' // Import WinnerModal component
 import { TURNS, WINNER_COMBINATIONS } from '../constants.js' // Import TURNS and WINNER_COMBINATIONS constants
 import { checkWinnerFrom } from '../logic/board.js' // Import checkWinner function
 
@@ -45,7 +46,7 @@ function App() {
   return (
     <main className="board">
       <h1>Tic Tac Toe</h1>
-
+      <button onClick={resetGame}>ResetGame</button>
       <section className="game">
         {
           board.map((_, index) => {
@@ -67,29 +68,7 @@ function App() {
         <Square isSelected={turn === TURNS.O}>{TURNS.O}</Square>
       </section>
 
-      {
-        winner !== null && (
-          <section className='winner'>
-            <div className='text'>
-              <h2>
-                {
-                  winner === false // Check if the winner is false
-                    ? 'Draw!' // If the winner is false, display 'Draw!'
-                    : 'Winner:' // If the winner is not false, display 'Winner: '
-                }
-              </h2>
-
-              <header className='win'>
-                {winner && <Square>{winner}</Square>} {/* Add Square component to display the winner */}
-              </header>
-
-              <footer>
-                <button onClick={resetGame}>Restart</button> {/* Add onClick event to the button */}
-              </footer>
-            </div>
-          </section>
-        )
-      }
+      <WinnerModal winner={winner} resetGame={resetGame} />
     </main>
   )
 }
