@@ -62,6 +62,10 @@ function App() {
     setWinner(null) // Reset the winner
   }
 
+  const checkEndGame = (newBoard) => {
+    return newBoard.every((square) => square !== null) // Check if all the squares are filled
+  }
+
 
   const updateBoard = (index) => {
     if (board[index] || winner) return // If the square is already filled or there is a winner, return
@@ -76,7 +80,9 @@ function App() {
     const newWinner = checkWinner(newBoard) // Check if there is a winner
     if (newWinner) {
       setWinner(newWinner) // Set the winner. This is not sinchronous
-    } // todo: check if game is over
+    } else if (checkEndGame(newBoard)) {
+      setWinner(false) // Set the winner to false  => Draw
+    }
   }
 
   return (
