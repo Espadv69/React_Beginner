@@ -3,6 +3,7 @@ export function WinnerModal({ winner, resetGame }) { // Add resetGame to the pro
   if (winner === null) return null
 
   const winnerText = winner === false ? 'Draw!' : `Winner: ${winner}`
+  
   return (
     <section className='winner'>
       <div className='text'>
