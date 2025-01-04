@@ -3,8 +3,8 @@ import confetti from 'canvas-confetti' // Import confetti library
 
 import { Square } from './Square.jsx' // Import Square component
 import { WinnerModal } from './WinnerModal.jsx' // Import WinnerModal component
-import { TURNS, WINNER_COMBINATIONS } from '../constants.js' // Import TURNS and WINNER_COMBINATIONS constants
-import { checkWinnerFrom } from '../logic/board.js' // Import checkWinner function
+import { TURNS } from '../constants.js' // Import TURNS and WINNER_COMBINATIONS constants
+import { checkWinnerFrom, checkEndGameFrom } from '../logic/board.js' // Import checkWinner function
 
 function App() {
   const [board, setBoard] = useState(Array(9).fill(null)) // Add board state
@@ -18,11 +18,6 @@ function App() {
     setTurn(TURNS.X) // Reset the turn
     setWinner(null) // Reset the winner
   }
-
-  const checkEndGame = (newBoard) => {
-    return newBoard.every((square) => square !== null) // Check if all the squares are filled
-  }
-
 
   const updateBoard = (index) => {
     if (board[index] || winner) return // If the square is already filled or there is a winner, return
@@ -38,7 +33,7 @@ function App() {
     if (newWinner) {
       confetti() // Add confetti
       setWinner(newWinner) // Set the winner. This is not sinchronous
-    } else if (checkEndGame(newBoard)) {
+    } else if (checkEndGameFrom(newBoard)) {
       setWinner(false) // Set the winner to false  => Draw
     }
   }
