@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import confetti from 'canvas-confetti'
 
 const TURNS = {
   X: 'X',
@@ -79,6 +80,7 @@ function App() {
 
     const newWinner = checkWinner(newBoard) // Check if there is a winner
     if (newWinner) {
+      confetti() // Add confetti
       setWinner(newWinner) // Set the winner. This is not sinchronous
     } else if (checkEndGame(newBoard)) {
       setWinner(false) // Set the winner to false  => Draw
