@@ -1,40 +1,11 @@
-import { useState } from 'react'
-import confetti from 'canvas-confetti'
+import { useState } from 'react' // Import useState hook
+import confetti from 'canvas-confetti' // Import confetti library
 
-const TURNS = {
-  X: 'X',
-  O: 'O'
-}
-
-const WINNER_COMBINATIONS = [
-  [0, 1, 2], // Horizontal
-  [3, 4, 5],
-  [6, 7, 8],
-
-  [0, 3, 6], // Vertical
-  [1, 4, 7],
-  [2, 5, 8],
-
-  [0, 4, 8], // Diagonal
-  [2, 4, 6]
-]
+import { Square } from './Square.jsx' // Import Square component
+import { TURNS, WINNER_COMBINATIONS } from '../constants' // Import TURNS and WINNER_COMBINATIONS constants
 
 
-const Square = ({ children, isSelected, updateBoard, index }) => {
-  const className = `square ${isSelected ? 'is-selected' : ''}`
 
-  // Add handleClick function to update the board
-  const handleClick = () => {
-    updateBoard(index)
-  }
-
-  // Add onClick event to the div
-  return (
-    <div onClick={handleClick} className={className}>
-      {children}
-    </div>
-  )
-}
 
 
 function App() {
@@ -137,7 +108,6 @@ function App() {
       }
     </main>
   )
-
 }
 
 export default App
