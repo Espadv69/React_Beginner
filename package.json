@@ -11,5 +11,8 @@
     "start:00-hello-world": "npm run dev --workspace=00-hello-world",
     "start:01-twitter-card": "npm run dev --workspace=01-twitter-card",
     "start:02-tic-tac-toe": "npm run dev --workspace=02-tic-tac-toe"
+  },
+  "dependencies": {
+    "canvas-confetti": "1.9.3"
   }
 }
