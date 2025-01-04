@@ -2,11 +2,8 @@ import { useState } from 'react' // Import useState hook
 import confetti from 'canvas-confetti' // Import confetti library
 
 import { Square } from './Square.jsx' // Import Square component
-import { TURNS, WINNER_COMBINATIONS } from '../constants' // Import TURNS and WINNER_COMBINATIONS constants
-
-
-
-
+import { TURNS, WINNER_COMBINATIONS } from '../constants.js' // Import TURNS and WINNER_COMBINATIONS constants
+import { checkWinnerFrom } from '../logic/board.js' // Import checkWinner function
 
 function App() {
   const [board, setBoard] = useState(Array(9).fill(null)) // Add board state
@@ -14,19 +11,6 @@ function App() {
   const [turn, setTurn] = useState(TURNS.X) // Add turn state
 
   const [winner, setWinner] = useState(null) // Add winner state
-  const checkWinner = (boardToCheck) => {
-
-    for (const combo of WINNER_COMBINATIONS) {
-      const [a, b, c] = combo // Destructure the combo
-      if (
-        boardToCheck[a] && // Check if the value is not null
-        boardToCheck[a] === boardToCheck[b] && // Check if the values are the same
-        boardToCheck[a] === boardToCheck[c] // Check if the values are the same
-      ) {
-        return boardToCheck[a] // Return the winner
-      }
-    }
-  }
 
   const resetGame = () => {
     setBoard(Array(9).fill(null)) // Reset the board
@@ -49,7 +33,7 @@ function App() {
     const newTurn = turn === TURNS.X ? TURNS.O : TURNS.X
     setTurn(newTurn) // Change the turn
 
-    const newWinner = checkWinner(newBoard) // Check if there is a winner
+    const newWinner = checkWinnerFrom(newBoard) // Check if there is a winner
     if (newWinner) {
       confetti() // Add confetti
       setWinner(newWinner) // Set the winner. This is not sinchronous
