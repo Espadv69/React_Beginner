@@ -1,5 +1,7 @@
 import { useState } from 'react'
 
+import '../css/Counter_useState.css'
+
 export const Counter_useState = () => {
   const [counter, setCounter] = useState(0)
 
@@ -14,9 +16,10 @@ export const Counter_useState = () => {
   return (
     <>
       <div className="container">
-        <button onClick={sum}>Sum</button>
-        <button onClick={subtract}>Subtract</button>
+        <button onClick={sum} className='sum'>Sum</button>
+        <button onClick={subtract} className='subtract'>Subtract</button>
       </div>
+      <p className='counter-p'>{counter}</p>
     </>
   )
 }
