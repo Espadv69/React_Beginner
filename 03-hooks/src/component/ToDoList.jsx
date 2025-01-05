@@ -5,6 +5,13 @@ export const ToDoList = () => {
   const [tasks, setTasks] = useState([])
   const [newTask, setNewTask] = useState('')
 
+  const addTask = () => {
+    if (newTask.trim() !== '') {
+      setTasks([...tasks, newTask])
+      setNewTask('')
+    }
+  }
+
   return (
     <div>
       <h1>Tasks List</h1>
