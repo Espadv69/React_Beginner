@@ -13,21 +13,25 @@ export const ToDoList = () => {
   }
 
   return (
-    <div className='container-toDo'>
-      <h1 className='h1-title'>Tasks List</h1>
+    <div className="container-toDo">
+      <h1 className="h1-title">Tasks List</h1>
       <input
-      className='input-toDo'
+        className="input-toDo"
         type="text"
         value={newTask}
         onChange={(e) => setNewTask(e.target.value)}
         placeholder="Write a task"
       />
 
-      <button onClick={addTask} className='button-toDo'>Add</button>
+      <button onClick={addTask} className="button-toDo">
+        Add
+      </button>
 
-      <ul className='ul-toDo'>
+      <ul className="ul-toDo">
         {tasks.map((task, index) => (
-          <li className='li-toDo' key={index}>{task}</li>
+          <li className="li-toDo" key={index}>
+            {task}
+          </li>
         ))}
       </ul>
     </div>
