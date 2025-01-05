@@ -14,12 +14,12 @@ export const Counter_useState = () => {
   }
 
   return (
-    <>
+    <div>
       <div className="container">
         <button onClick={sum} className='sum'>Sum</button>
         <button onClick={subtract} className='subtract'>Subtract</button>
       </div>
       <p className='counter-p'>{counter}</p>
-    </>
+    </div>
   )
 }
