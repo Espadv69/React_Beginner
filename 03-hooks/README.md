@@ -3,3 +3,4 @@
 
 
 # **2. To-Do List with [useState] and [useEffect]**
+**Prompt:** _Create a to-do list. When a new task is added, it should appear in a list on the screen. When a task is added, use the [useEffect] Hook to save the list of tasks to [localStorage] so that the list persists after reloading the page. Use [useState] to manage the tasks_
