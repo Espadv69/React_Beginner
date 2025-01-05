@@ -39,7 +39,7 @@ function App() {
     setTurn(newTurn) // Change the turn
 
     window.localStorage.setItem('board', JSON.stringify(newBoard)) // Save the board in the local storage
-    window.localStorage.setItem('turn', turn)
+    window.localStorage.setItem('turn', newTurn)
 
     const newWinner = checkWinnerFrom(newBoard) // Check if there is a winner
     if (newWinner) {
