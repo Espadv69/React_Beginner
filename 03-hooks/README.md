@@ -8,3 +8,7 @@
 
 # **3. Clock with [useState] and [useEffect]**
 **Prompt:** _Create a component that shows a digital clock in real-time. Use [useState] to hold the current time and [useEffect] to update it every second. Use [setInterval] inside [useEffect] to update the state every 1000 ms (1 second), and ensure you clean up the interval when the component unmounts._
+
+
+# **4. Form with Validation using [useState]**
+**Prompt:** _Create a form with a text field where the user must input an email address. Use [useState] to manage the input field value and display an error message if the email format is invalid (for example, if it does not contain "@" and ".com"). Add a submit button and disable it if the email is not valid._
