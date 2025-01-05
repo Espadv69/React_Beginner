@@ -20,5 +20,8 @@
   },
   "eslintConfig": {
     "extends": "./node_modules/standard/eslintrc.json"
+  },
+  "prettier": {
+    "singleQuote": true
   }
 }
