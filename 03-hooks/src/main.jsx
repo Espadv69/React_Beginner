@@ -6,6 +6,6 @@ const root = ReactDom.createRoot(document.getElementById('root'))
 
 root.render(
   <>
-    <h1 className='h1-title'>Hooks</h1>
+    <h1 className="h1-title">Hooks</h1>
   </>
 )
