@@ -12,3 +12,7 @@
 
 # **4. Form with Validation using [useState]**
 **Prompt:** _Create a form with a text field where the user must input an email address. Use [useState] to manage the input field value and display an error message if the email format is invalid (for example, if it does not contain "@" and ".com"). Add a submit button and disable it if the email is not valid._
+
+
+# **5. Counter with [useReducer]**
+**Prompt:** _Create a counter with buttons to increment, decrement, and the reset counter value. Instead of using [useState], use [useReducer] to manage the counter state. The reducer should have three actions: "INCREMENT", "DECREMENT", and "RESET"._
