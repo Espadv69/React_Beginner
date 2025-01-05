@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-import '../css/Counter_useState.css'
+import '../css/Components.css'
 
 export const Counter_useState = () => {
   const [counter, setCounter] = useState(0)
