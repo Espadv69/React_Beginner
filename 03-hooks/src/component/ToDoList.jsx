@@ -5,6 +5,22 @@ export const ToDoList = () => {
   const [tasks, setTasks] = useState([])
   const [newTask, setNewTask] = useState('')
 
+  useEffect(() => {
+    if (tasks.length > 0) {
+      localStorage.setItem('tasks', JSON.stringify(tasks))
+      console.log('save in localStorage')
+    }
+  }, [tasks])
+
+  useEffect(() => {
+    const savedTasks = localStorage.getItem('tasks')
+    console.log('render from localStorage')
+
+    if (savedTasks) {
+      setTasks(JSON.parse(savedTasks))
+    }
+  }, [])
+
   const addTask = () => {
     if (newTask.trim() !== '') {
       setTasks([...tasks, newTask])
