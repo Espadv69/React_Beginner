@@ -3,8 +3,8 @@
 
 
 # **2. To-Do List with [useState] and [useEffect]**
-**Prompt:** _Create a to-do list. When a new task is added, it should appear in a list on the screen. When a task is added, use the [useEffect] Hook to save the list of tasks to [localStorage] so that the list persists after reloading the page. Use [useState] to manage the tasks_
+**Prompt:** _Create a to-do list. When a new task is added, it should appear in a list on the screen. When a task is added, use the [useEffect] Hook to save the list of tasks to [localStorage] so that the list persists after reloading the page. Use [useState] to manage the tasks._
 
 
 # **3. Clock with [useState] and [useEffect]**
-**Prompt:**
+**Prompt:** _Create a component that shows a digital clock in real-time. Use [useState] to hold the current time and [useEffect] to update it every second. Use [setInterval] inside [useEffect] to update the state every 1000 ms (1 second), and ensure you clean up the interval when the component unmounts._
