@@ -27,7 +27,7 @@ export const ToDoList = () => {
 
       <ul className='ul-toDo'>
         {tasks.map((task, index) => (
-          <li key={index}>{task}</li>
+          <li className='li-toDo' key={index}>{task}</li>
         ))}
       </ul>
     </div>
