@@ -1,4 +1,4 @@
-import { useState } from 'react' // Import useState hook
+import { useState, useEffect } from 'react' // Import useState hook
 import confetti from 'canvas-confetti' // Import confetti library
 
 
@@ -49,6 +49,10 @@ function App() {
       setWinner(false) // Set the winner to false  => Draw
     }
   }
+
+  useEffect(() => {
+    console.log('useEffect')
+  }, [])
 
   return (
     <main className="board">
