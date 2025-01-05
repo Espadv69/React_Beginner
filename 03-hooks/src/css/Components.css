@@ -1,0 +1,27 @@
+.container {
+  margin-top: 10px;
+
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.sum,
+.subtract {
+  cursor: pointer;
+
+  width: 100px;
+  padding: .4rem 1rem;
+
+  border: 1px solid grey;
+  border-radius: .3rem;
+
+  color: whitesmoke;
+  background: transparent;
+}
+
+.counter-p {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+}
