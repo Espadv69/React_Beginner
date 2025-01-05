@@ -1,5 +1,5 @@
 import React from 'react'
-import ReactDom from 'react-dom'
+import ReactDom from 'react-dom/client'
 
 import { Counter_useState } from './component/Counter_useState.jsx'
 import { ToDoList } from './component/ToDoList.jsx'
