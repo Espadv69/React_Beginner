@@ -33,7 +33,7 @@ function App() {
     if (newWinner) {
       confetti() // Add confetti
       setWinner(newWinner) // Set the winner. This is not sinchronous
-    } else if (checkEndGameFrom(newBoard)) {
+    } else if (checkEndGameFrom({ newBoard })) {
       setWinner(false) // Set the winner to false  => Draw
     }
   }
