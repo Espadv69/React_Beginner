@@ -7,9 +7,15 @@ import { TURNS } from '../constants.js' // Import TURNS and WINNER_COMBINATIONS 
 import { checkWinnerFrom, checkEndGameFrom } from '../logic/board.js' // Import checkWinner function
 
 function App() {
-  const [board, setBoard] = useState(Array(9).fill(null)) // Add board state
+  const [board, setBoard] = useState(() => {
+    const boardFromLocalStorage = window.localStorage.getItem('board') // Get the board from the local storage
+    return boardFromLocalStorage ? JSON.parse(boardFromLocalStorage) : Array(9).fill(null)
+  }) // Add board state
 
-  const [turn, setTurn] = useState(TURNS.X) // Add turn state
+  const [turn, setTurn] = useState(() => {
+    const turnFromLocalStorage = window.localStorage.getItem('turn') // Get the turn from the local storage
+    return turnFromLocalStorage ?? TURNS.X
+  }) // Add turn state
 
   const [winner, setWinner] = useState(null) // Add winner state
 
@@ -17,6 +23,9 @@ function App() {
     setBoard(Array(9).fill(null)) // Reset the board
     setTurn(TURNS.X) // Reset the turn
     setWinner(null) // Reset the winner
+
+    window.localStorage.removeItem('board') // Remove the board from the local storage
+    window.localStorage.removeItem('turn') // Remove the turn from the local storage
   }
 
   const updateBoard = (index) => {
@@ -28,6 +37,9 @@ function App() {
 
     const newTurn = turn === TURNS.X ? TURNS.O : TURNS.X
     setTurn(newTurn) // Change the turn
+
+    window.localStorage.setItem('board', JSON.stringify(newBoard)) // Save the board in the local storage
+    window.localStorage.setItem('turn', turn)
 
     const newWinner = checkWinnerFrom(newBoard) // Check if there is a winner
     if (newWinner) {
