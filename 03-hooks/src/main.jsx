@@ -7,9 +7,9 @@ import './css/index.css'
 const root = ReactDom.createRoot(document.getElementById('root'))
 
 root.render(
-  <>
+  <React.StrictMode>
     <h1 className="h1-title">Hooks</h1>
 
     <Counter_useState />
-  </>
+  </React.StrictMode>
 )
