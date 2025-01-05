@@ -34,12 +34,14 @@
 .ul-toDo {
   padding: .3rem;
 
-  list-style: none;
-
   border: 1px solid whitesmoke;
   border-radius: .4rem;
 
-  overflow: hidden;
+  overflow-wrap: break-word;
+}
+
+.li-toDo {
+  font-weight: 400;
 }
 
 .sum,
