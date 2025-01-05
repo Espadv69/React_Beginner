@@ -1,1 +1,1 @@
-# **- 1. Counter with useState**
+# **1. Counter with useState**
