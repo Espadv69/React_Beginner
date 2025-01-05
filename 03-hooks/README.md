@@ -15,4 +15,4 @@
 
 
 # **5. Counter with [useReducer]**
-**Prompt:** _Create a counter with buttons to increment, decrement, and the reset counter value. Instead of using **[useState]**, use **[useReducer]** to manage the counter state. The reducer should have three actions: "INCREMENT", "DECREMENT", and "RESET"._
+**Prompt:** _Create a counter with buttons to increment, decrement, and the reset counter value. Instead of using **[useState]**, use **[useReducer]** to manage the counter state. The reducer should have three actions: **"INCREMENT"**, **"DECREMENT"**, and **"RESET"**._
