@@ -3,6 +3,7 @@ import ReactDom from 'react-dom/client'
 
 import { Counter_useState } from './component/Counter_useState.jsx'
 import { ToDoList } from './component/ToDoList.jsx'
+import { Clock } from './component/Clock.jsx'
 import './css/index.css'
 
 const root = ReactDom.createRoot(document.getElementById('root'))
@@ -13,5 +14,6 @@ root.render(
 
     <Counter_useState />
     <ToDoList />
+    <Clock />
   </React.StrictMode>
 )
