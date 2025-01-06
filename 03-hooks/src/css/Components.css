@@ -64,3 +64,12 @@
   font-size: 24px;
   font-weight: 600;
 }
+
+.clock {
+  max-width: 400px;
+  margin: 10px auto;
+  padding: .7rem 0;
+
+  border: 1px solid white;
+  border-radius: .3rem;
+}
