@@ -13,16 +13,12 @@ const root = ReactDom.createRoot(document.getElementById('root'))
 root.render(
   <React.StrictMode>
     <h1 className="h1-title">Hooks</h1>
+    <hr />
 
     <Counter_useState />
-    <hr />
     <ToDoList />
-    <hr />
     <Clock />
-    <hr />
     <Form />
-    <hr />
     <Counter_useReducer />
-    <hr />
   </React.StrictMode>
 )
