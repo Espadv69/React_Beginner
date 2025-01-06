@@ -105,3 +105,23 @@
   text-align: center;
   color: red;
 }
+
+.buttons-container {
+  margin: 10px auto;
+  margin-bottom: 1.5rem;
+
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.btn {
+  cursor: pointer;
+
+  padding: .3rem 1rem;
+
+  border: 1px solid whitesmoke;
+  border-radius: .3rem;
+
+  color: whitesmoke;
+  background: transparent;
+}
