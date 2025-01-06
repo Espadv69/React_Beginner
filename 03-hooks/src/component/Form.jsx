@@ -26,6 +26,7 @@ export const Form = () => {
   // HTML structure
   return (
     <div>
+      <h1 className="h1-title">Form</h1>
       <form className="form" onSubmit={handleSubmit}>
         <label className="label-form">Email</label>
         <input
