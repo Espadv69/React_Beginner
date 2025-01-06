@@ -17,10 +17,15 @@ export const Form = () => {
     }
   }
 
+  const handleButtonSubmit = (e) => {
+    e.preventDefault()
+    alert(`Email: ${email}`)
+  }
+
   return (
     <div>
       <h1 className="h1-title">Form</h1>
-      <form className="form">
+      <form className="form" onSubmit={handleButtonSubmit}>
         <label className="label-form">Email:</label>
         <input
           className="input-form"
@@ -31,11 +36,12 @@ export const Form = () => {
         <button
           className="button-form"
           type="submit"
+          disabled={error !== '' || email === ''}
         >
           Submit
         </button>
       </form>
-      {/* todo: error message */}
+      {error && <p className='error-form'>{error}</p>}
     </div>
   )
 }
