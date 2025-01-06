@@ -8,8 +8,8 @@ const counter = (state, action) => {
     case 'increment':
       return { count: state.count + 1 }
     case 'decrement':
-      return { count: state.count - 1}
-    case ' reset':
+      return { count: state.count - 1 }
+    case 'reset':
       return initialCounter
     default:
       throw new Error('Unknow action')
@@ -23,10 +23,28 @@ export const Counter_useReducer = () => {
     <div>
       <h1 className="h1-title">Counter useReducer</h1>
       <p className="p-counter">{state.count}</p>
-      <div className='buttons-container'>
-        <button className='btn'>Increment</button>
-        <button className='btn'>Decrement</button>
-        <button className='btn'>Reset</button>
+      <div className="buttons-container">
+        <button
+          type="button"
+          className="btn"
+          onClick={() => dispatch({ type: 'increment' })}
+        >
+          Increment
+        </button>
+        <button
+          type="button"
+          className="btn"
+          onClick={() => dispatch({ type: 'decrement' })}
+        >
+          Decrement
+        </button>
+        <button
+          type="button"
+          className="btn"
+          onClick={() => dispatch({ type: 'reset' })}
+        >
+          Reset
+        </button>
       </div>
     </div>
   )
