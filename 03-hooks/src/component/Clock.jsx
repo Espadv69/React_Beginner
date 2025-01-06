@@ -11,4 +11,13 @@ export const Clock = () => {
 
     return () => clearInterval(intervalId)
   }, [])
+
+  return (
+    <div>
+      <h1 className="h1-title">Clock</h1>
+      <div className="clock">
+        <h2 className="h2-clock">{date.toLocaleTimeString()}</h2>
+      </div>
+    </div>
+  )
 }
