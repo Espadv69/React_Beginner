@@ -2,34 +2,35 @@ import { useState } from 'react'
 import '../css/Components.css'
 
 export const Form = () => {
-  const [email, setEmail] = useState('')
-  const [error, setError] = useState('')
+  const [email, setEmail] = useState('') // handle input changes
+  const [error, setError] = useState('') // handle error input
 
   const handleEmailChange = (e) => {
     const value = e.target.value
     setEmail(value)
-    console.log('render email')
+    console.log('render input email')
 
     if (!value.includes('@') || !value.includes('.com')) {
-      setError('Invalid Email')
+      setError('Invalid input. Required: (@) and (.com)')
     } else {
       setError('')
     }
   }
 
-  const handleButtonSubmit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault()
     alert(`Email: ${email}`)
+    setEmail('')
   }
 
+  // HTML structure
   return (
     <div>
-      <h1 className="h1-title">Form</h1>
-      <form className="form" onSubmit={handleButtonSubmit}>
-        <label className="label-form">Email:</label>
+      <form className="form" onSubmit={handleSubmit}>
+        <label className="label-form">Email</label>
         <input
-          className="input-form"
           type="text"
+          className="input-form"
           value={email}
           onChange={handleEmailChange}
         />
@@ -41,7 +42,7 @@ export const Form = () => {
           Submit
         </button>
       </form>
-      {error && <p className='error-form'>{error}</p>}
+      {error && <p className="error-form">{error}</p>}
     </div>
   )
 }
