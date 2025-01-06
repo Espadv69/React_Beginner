@@ -5,6 +5,7 @@ import { Counter_useState } from './component/Counter_useState.jsx'
 import { ToDoList } from './component/ToDoList.jsx'
 import { Clock } from './component/Clock.jsx'
 import { Form } from './component/Form.jsx'
+import { Counter_useReducer } from './component/Counter_useReducer.jsx'
 import './css/index.css'
 
 const root = ReactDom.createRoot(document.getElementById('root'))
@@ -21,5 +22,6 @@ root.render(
     <hr />
     <Form />
     <hr />
+    <Counter_useReducer />
   </React.StrictMode>
 )
