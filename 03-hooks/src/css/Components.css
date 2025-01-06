@@ -65,11 +65,43 @@
   font-weight: 600;
 }
 
-.clock {
+.clock,
+.form {
   max-width: 400px;
   margin: 10px auto;
   padding: .7rem 0;
 
   border: 1px solid white;
   border-radius: .3rem;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .4rem;
+}
+
+.input-form {
+  padding: .3rem;
+  width: 200px;
+
+  border: 1px solid white;
+  border-radius: .2rem;
+}
+
+.button-form {
+  cursor: pointer;
+  padding: .3rem 1rem;
+
+  border: 1px solid white;
+  border-radius: .2rem;
+
+  color: whitesmoke;
+  background: transparent;
+}
+
+.error-form {
+  text-align: center;
+  color: red;
 }
