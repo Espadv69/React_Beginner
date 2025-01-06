@@ -23,5 +23,6 @@ root.render(
     <Form />
     <hr />
     <Counter_useReducer />
+    <hr />
   </React.StrictMode>
 )
