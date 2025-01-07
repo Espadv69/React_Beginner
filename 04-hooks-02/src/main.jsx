@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 
 import { Clock } from './components/Clock.jsx'
 import { Timer } from './components/Timer.jsx'
+import { UserList } from './components/UserList.jsx'
 
 import './css/main.css'
 
@@ -14,5 +15,6 @@ root.render(
     <Clock />
     <hr />
     <Timer />
+    <UserList />
   </div>
 )
