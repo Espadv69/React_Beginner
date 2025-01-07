@@ -1,0 +1,133 @@
+.container,
+.container-toDo {
+  margin-top: 10px;
+
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.container-toDo {
+  margin: 20px auto;
+  max-width: 400px;
+
+  flex-direction: column;
+}
+
+.input-toDo,
+.button-toDo {
+  margin: auto;
+  padding: .5rem 1rem;
+  width: 200px;
+
+  border: 1px solid white;
+  border-radius: .3rem;
+}
+
+.button-toDo {
+  cursor: pointer;
+
+  color: whitesmoke;
+  background: transparent;
+}
+
+.ul-toDo {
+  padding: .3rem;
+
+  border: 1px solid whitesmoke;
+  border-radius: .4rem;
+
+  overflow-wrap: break-word;
+}
+
+.li-toDo {
+  font-weight: 400;
+}
+
+.sum,
+.subtract {
+  cursor: pointer;
+
+  width: 100px;
+  padding: .4rem 1rem;
+
+  border: 1px solid grey;
+  border-radius: .3rem;
+
+  color: whitesmoke;
+  background: transparent;
+}
+
+.counter-p,
+.h2-clock {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.clock,
+.form {
+  max-width: 400px;
+  margin: 10px auto;
+  padding: .7rem 0;
+
+  border: 1px solid white;
+  border-radius: .3rem;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .4rem;
+}
+
+.input-form {
+  padding: .3rem;
+  width: 200px;
+
+  border: 1px solid white;
+  border-radius: .2rem;
+}
+
+.button-form {
+  cursor: pointer;
+  padding: .3rem 1rem;
+
+  border: 1px solid white;
+  border-radius: .2rem;
+
+  color: whitesmoke;
+  background: transparent;
+}
+
+.error-form {
+  text-align: center;
+  color: red;
+}
+
+.p-counter {
+  text-align: center;
+  font-size: 24px;
+}
+
+.buttons-container {
+  margin: 10px auto;
+  margin-bottom: 1.5rem;
+
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  cursor: pointer;
+
+  padding: .3rem 1rem;
+
+  border: 1px solid whitesmoke;
+  border-radius: .3rem;
+
+  color: whitesmoke;
+  background: transparent;
+}
