@@ -22,16 +22,17 @@ export const Timer = () => {
   }
   
   const handleReset = () => {
-    setIsActive(true)
     setSeconds(0)
+    setIsActive(true)
   }
   
   const classButtonPause = () => {
     return isActive ? 'btn-timer' : 'btn-timer btn-false'
   }
-  
+
   return (
     <div>
+      <h1 className="h1-title">Timer</h1>
       <p className="p-timer">{seconds}</p>
       <div className="btns-timer">
         <button className={classButtonPause()} onClick={handlePause}>
