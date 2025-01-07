@@ -10,3 +10,15 @@ body {
   color: white;
   background: rgb(59, 59, 59);
 }
+
+.container-index {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.h1-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 24px;
+}
