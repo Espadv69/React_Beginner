@@ -6,13 +6,15 @@
     "00-hello-world",
     "01-twitter-card",
     "02-tic-tac-toe",
-    "03-hooks-01"
+    "03-hooks-01",
+    "04-hooks-02"
   ],
   "scripts": {
     "start:00-hello-world": "npm run dev --workspace=00-hello-world",
     "start:01-twitter-card": "npm run dev --workspace=01-twitter-card",
     "start:02-tic-tac-toe": "npm run dev --workspace=02-tic-tac-toe",
-    "start:03-hooks": "npm run dev --workspace=03-hooks-01"
+    "start:03-hooks-01": "npm run dev --workspace=03-hooks-01",
+    "start:03-hooks-02": "npm run dev --workspace=03-hooks-02"
   },
   "dependencies": {
     "canvas-confetti": "1.9.3"
