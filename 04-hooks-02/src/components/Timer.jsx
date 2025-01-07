@@ -16,20 +16,25 @@ export const Timer = () => {
     return () => clearInterval(intervalSeconds)
   }, [isActive])
 
+  
   const handlePause = () => {
     setIsActive(!isActive)
   }
-
+  
   const handleReset = () => {
     setIsActive(true)
     setSeconds(0)
   }
-
+  
+  const classButtonPause = () => {
+    return isActive ? 'btn-timer' : 'btn-timer btn-false'
+  }
+  
   return (
     <div>
       <p className="p-timer">{seconds}</p>
       <div className="btns-timer">
-        <button className="btn-timer" onClick={handlePause}>
+        <button className={classButtonPause()} onClick={handlePause}>
           {isActive ? 'Pause' : 'Resume'}
         </button>
         <button className="btn-timer" onClick={handleReset}>
