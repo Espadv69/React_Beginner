@@ -40,7 +40,12 @@
   color: lightcoral;
   background: rgba(255, 255, 255, 0.100);
 
-  transition: all 300ms ease-in-out;
+  transition: transform 300ms ease-in-out;
+}
+
+.btn-timer:active,
+.btn-false:active {
+  transform: scale(.98);
 }
 
 .btn-false {
