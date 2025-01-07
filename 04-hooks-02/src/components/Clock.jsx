@@ -15,7 +15,7 @@ export const Clock = () => {
 
   return (
     <div className="clock">
-      <p className='p-clock'>{date.toLocaleTimeString()}</p>
+      <p className="p-clock">{date.toLocaleTimeString()}</p>
     </div>
   )
 }
