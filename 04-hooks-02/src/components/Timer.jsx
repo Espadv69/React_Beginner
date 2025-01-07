@@ -16,16 +16,15 @@ export const Timer = () => {
     return () => clearInterval(intervalSeconds)
   }, [isActive])
 
-  
   const handlePause = () => {
     setIsActive(!isActive)
   }
-  
+
   const handleReset = () => {
     setSeconds(0)
     setIsActive(true)
   }
-  
+
   const classButtonPause = () => {
     return isActive ? 'btn-timer' : 'btn-timer btn-false'
   }
