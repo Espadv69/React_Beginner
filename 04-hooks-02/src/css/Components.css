@@ -11,7 +11,39 @@
   box-shadow: -1px 5px 10px rgba(0, 0, 0, 0.200);
 }
 
-.p-clock {
+.p-clock,
+.p-timer {
   text-align: center;
   font-size: 22px;
+}
+
+.btns-timer {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.btn-timer {
+  cursor: pointer;
+
+  width: 100%;
+  max-width: 120px;
+
+  padding: .4rem 0rem;
+
+  border: 1px solid transparent;
+  border-radius: .4rem;
+
+  text-transform: uppercase;
+  font-weight: 600;
+
+  color: lightcoral;
+  background: rgba(255, 255, 255, 0.100);
+
+  transition: all 300ms ease-in-out;
+}
+
+.btn-false {
+  background: transparent;
+  border: 1px solid lightcoral;
 }
