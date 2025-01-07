@@ -6,12 +6,23 @@ export const Timer = () => {
   const [seconds, setSeconds] = useState(0)
   const [isActive, setIsActive] = useState(true)
 
+  useEffect(() => {
+    const intervalSeconds = isActive
+      ? setInterval(() => {
+          setSeconds((s) => s + 1)
+        }, 1000)
+      : null
+
+      return () => clearInterval(intervalSeconds)
+  }, [isActive])
+
+
   return (
     <div>
-      <p className="p-timer">{}</p>
+      <p className="p-timer">{seconds}</p>
       <div className="btns-timer">
-        <button className="btn-timer">{}</button>
-        <button className="btn-timer">Reset</button>
+        <button className="btn-timer" onClick={handlePause}>{isActive ? 'Pause' : 'Resume'}</button>
+        <button className="btn-timer" onClick={handleReset}>Reset</button>
       </div>
     </div>
   )
