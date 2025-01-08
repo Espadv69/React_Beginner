@@ -16,10 +16,16 @@ const calculator = (state, action) => {
 }
 
 export const AdvanceCounter = () => {
+  const [state, dispatch] = useReducer(calculator, initialCounter)
+
+  const handleIncrement = () => {
+    dispatch({ type: 'increment' })
+  }
+
   return (
     <div>
-      <p>{ }</p>
-      <button>Increment</button>
+      <p>{state.count}</p>
+      <button onClick={handleIncrement}>Increment</button>
       <button>Decrement</button>
       <button>Reset</button>
     </div>
