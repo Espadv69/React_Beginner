@@ -17,10 +17,16 @@ export const UserSearch = () => {
     return () => clearTimeout(timeoutId)
   }, [searchTerm])
 
+  const handleSearch = (e) => {
+    const value = e.target.value
+    setSearchTerm(value)
+    console.log(value)
+  }
+
   return (
     <div>
       <h1 className="h1-title">User Search</h1>
-      <input type="text" className="input-search" />
+      <input type="text" className="input-search" onChange={handleSearch} />
     </div>
   )
 }
