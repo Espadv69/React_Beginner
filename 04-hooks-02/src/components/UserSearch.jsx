@@ -1,7 +1,24 @@
 import { useState, useEffect } from 'react'
 
 export const UserSearch = () => {
-  const users = ['John', 'Maria', 'Peter', 'Anna', 'Carlos']
+  const users = [
+    'John',
+    'Maria',
+    'Peter',
+    'Anna',
+    'Carlos',
+    'Sophia',
+    'James',
+    'Emily',
+    'Michael',
+    'Emma',
+    'David',
+    'Olivia',
+    'Daniel',
+    'Isabella',
+    'Liam',
+  ]
+
   const [searchTerm, setSearchTerm] = useState('')
   const [results, setResults] = useState([])
 
