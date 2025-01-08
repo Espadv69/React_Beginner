@@ -6,7 +6,15 @@ export const UserSearch = () => {
   const [results, setResults] = useState([])
 
   useEffect(() => {
-    const timeoutId = setTimeout(() => {}, 500)
+    const timeoutId = setTimeout(() => {
+      const filtered = users.filter((user) => {
+        return user.toLowerCase().includes(searchTerm.toLowerCase())
+      })
+
+      setResults(filtered)
+    }, 500)
+
+    return () => clearTimeout(timeoutId)
   }, [searchTerm])
 
   return (
