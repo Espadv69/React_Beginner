@@ -17,6 +17,7 @@ export const UserSearch = () => {
     'Daniel',
     'Isabella',
     'Liam',
+    'Gema'
   ]
 
   const [searchTerm, setSearchTerm] = useState('')
