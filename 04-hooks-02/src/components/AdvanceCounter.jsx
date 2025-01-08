@@ -32,10 +32,12 @@ export const AdvanceCounter = () => {
 
   return (
     <div>
-      <p>{state.count}</p>
-      <button onClick={handleIncrement}>Increment</button>
-      <button onClick={handleDecrement}>Decrement</button>
-      <button onClick={handleReset}>Reset</button>
+      <p className="p-counter">{state.count}</p>
+      <div className="buttons-container">
+        <button type="button" className="btn-counter" onClick={handleIncrement}>Increment</button>
+        <button type="button" className="btn-counter" onClick={handleDecrement}>Decrement</button>
+        <button type="button" className="btn-counter" onClick={handleReset}>Reset</button>
+      </div>
     </div>
   )
 }
