@@ -99,6 +99,10 @@
   margin-top: 1.3rem;
 }
 
+.p-search {
+  font-size: 15px;
+}
+
 .not-search {
   color: red;
 }
