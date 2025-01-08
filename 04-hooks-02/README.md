@@ -15,9 +15,9 @@
 
 # **3. LoginForm**
 **Prompt:** Create a component called `LoginForm` that:  
-- Contains a form with two fields: **Email** and **Password**.  
+- Contains a form with two fields: **Username** and **Password**.  
 - Uses **[useState]** to manage the state of each field.  
-- Displays the entered email and password in the console when the form is submitted.
+- Displays the entered username and password in the console when the form is submitted.
 
 # **4. Theme Toggle**
 **Prompt:** Create an application that:  
