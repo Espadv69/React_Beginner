@@ -26,7 +26,13 @@ export const UserSearch = () => {
   return (
     <div>
       <h1 className="h1-title">User Search</h1>
-      <input type="text" className="input-search" onChange={handleSearch} />
+      <input
+        type="text"
+        className="input-search"
+        value={searchTerm}
+        onChange={handleSearch}
+        placeholder="Write a name to search"
+      />
     </div>
   )
 }
