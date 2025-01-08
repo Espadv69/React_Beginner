@@ -53,7 +53,7 @@ export const UserSearch = () => {
       />
 
       {searchTerm.trim() === '' ? (
-        <p className="p-search">Search</p>
+        <p className="p-search">Enter a search term</p>
       ) : results.length > 0 ? (
         <ul className="ul-search">
           {results.map((user, index) => (
