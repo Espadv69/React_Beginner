@@ -33,6 +33,18 @@ export const UserSearch = () => {
         onChange={handleSearch}
         placeholder="Write a name to search"
       />
+
+      {searchTerm.trim() === '' ? (
+        <p className="p-search">Search</p>
+      ) : results.length > 0 ? (
+        <ul>
+          {results.map((user, index) => (
+            <li key={index}>{user}</li>
+          ))}
+        </ul>
+      ) : (
+        <p className="p-search not-search">Not found</p>
+      )}
     </div>
   )
 }
