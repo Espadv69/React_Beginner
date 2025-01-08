@@ -22,12 +22,20 @@ export const AdvanceCounter = () => {
     dispatch({ type: 'increment' })
   }
 
+  const handleDecrement = () => {
+    dispatch({ type: 'decrement' })
+  }
+
+  const handleReset = () => {
+    dispatch({ type: 'reset' })
+  }
+
   return (
     <div>
       <p>{state.count}</p>
       <button onClick={handleIncrement}>Increment</button>
-      <button>Decrement</button>
-      <button>Reset</button>
+      <button onClick={handleDecrement}>Decrement</button>
+      <button onClick={handleReset}>Reset</button>
     </div>
   )
 }
