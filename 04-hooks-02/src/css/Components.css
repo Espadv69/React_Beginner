@@ -15,19 +15,22 @@
 .p-timer,
 .p-users,
 .p-search,
-.not-search {
+.not-search,
+.p-counter {
   text-align: center;
   font-size: 22px;
 }
 
-.btns-timer {
+.btns-timer,
+.buttons-container {
   display: flex;
   justify-content: center;
   gap: 1.5rem;
 }
 
 .btn-timer,
-.button-form-login {
+.button-form-login,
+.btn-counter {
   cursor: pointer;
 
   width: 100%;
