@@ -21,5 +21,6 @@ root.render(
     <UserList />
     <LoginForm />
     <UserSearch />
+    <AdvanceCounter />
   </div>
 )
