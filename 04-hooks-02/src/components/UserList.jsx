@@ -13,14 +13,14 @@ export const UserList = () => {
   }, [])
 
   const ifLoanding = () => {
-    if (loanding) return <p>Loanding...</p>
+    if (loanding) return <p className="p-users">Loanding...</p>
   }
 
   return (
     <div>
       <h1 className="h1-title">User List</h1>
       {ifLoanding()}
-      <ol>
+      <ol className="ol-users">
         {users.map((user) => (
           <li key={user.id}>{user.name}</li>
         ))}
