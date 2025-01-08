@@ -19,7 +19,7 @@
 - Uses **[useState]** to manage the state of each field.  
 - Displays the entered username and password in the console when the form is submitted.
 
-# **4. User Search**
+# **4. UserSearch**
 **Prompt:** Create an application that:  
 - Uses an input field (`<input>`) to allow the user to type a search term.  
 - Uses `useState` to store the search term.  
