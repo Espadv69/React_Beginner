@@ -32,7 +32,6 @@
 - Simulate the API call using a `setTimeout` with a 500ms delay to avoid triggering it on every keystroke.  
 - Display a message like "Enter a search term" if the input field is empty.  
 
-
 # **5. AdvancedCounter**
 **Prompt:** Create a component called `AdvancedCounter` that:  
 - Uses **[useReducer]** to manage a counter with the following actions: increment, decrement, reset.  
