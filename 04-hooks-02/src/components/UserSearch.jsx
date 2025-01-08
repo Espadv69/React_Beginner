@@ -5,6 +5,10 @@ export const UserSearch = () => {
   const [searchTerm, setSearchTerm] = useState('')
   const [results, setResults] = useState([])
 
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {}, 500)
+  }, [searchTerm])
+
   return (
     <div>
       <h1 className="h1-title">User Search</h1>
