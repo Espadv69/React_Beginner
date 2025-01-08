@@ -6,6 +6,7 @@ import { Timer } from './components/Timer.jsx'
 import { UserList } from './components/UserList.jsx'
 import { LoginForm } from './components/LoginForm.jsx'
 import { UserSearch } from './components/UserSearch.jsx'
+import { AdvanceCounter } from './components/AdvanceCounter.jsx'
 
 import './css/main.css'
 
