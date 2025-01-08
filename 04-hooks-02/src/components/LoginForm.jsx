@@ -1,6 +1,9 @@
 import { useState } from 'react'
 
 export const LoginForm = () => {
+  const [user, setUser] = useState('')
+  const [password, setPassword] = useState('')
+  
   return (
     <div>
       <h1 className="h1-title">Login-Form</h1>
