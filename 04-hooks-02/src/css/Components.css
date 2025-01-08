@@ -13,7 +13,9 @@
 
 .p-clock,
 .p-timer,
-.p-users {
+.p-users,
+.p-search,
+.not-search {
   text-align: center;
   font-size: 22px;
 }
@@ -55,7 +57,8 @@
   border: 1px solid lightcoral;
 }
 
-.ol-users {
+.ol-users,
+.ul-search {
   margin: auto;
   padding: 1rem;
   width: 100%;
@@ -90,4 +93,12 @@
 .input-search {
   display: flex;
   justify-self: center;
+}
+
+.ul-search {
+  margin-top: 1.3rem;
+}
+
+.not-search {
+  color: red;
 }
