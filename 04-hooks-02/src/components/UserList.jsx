@@ -20,9 +20,11 @@ export const UserList = () => {
     <div>
       <h1 className="h1-title">User List</h1>
       {ifLoanding()}
-      {users.map((user) => (
-        <li key={user.id}>{user.name}</li>
-      ))}
+      <ol>
+        {users.map((user) => (
+          <li key={user.id}>{user.name}</li>
+        ))}
+      </ol>
     </div>
   )
 }
