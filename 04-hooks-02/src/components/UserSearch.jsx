@@ -37,7 +37,7 @@ export const UserSearch = () => {
       {searchTerm.trim() === '' ? (
         <p className="p-search">Search</p>
       ) : results.length > 0 ? (
-        <ul>
+        <ul className="ul-search">
           {results.map((user, index) => (
             <li key={index}>{user}</li>
           ))}
