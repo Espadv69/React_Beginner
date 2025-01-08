@@ -67,3 +67,11 @@
 
   border: 2px solid lightcoral;
 }
+
+.form-login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: .7rem;
+}
