@@ -25,14 +25,14 @@ export const LoginForm = () => {
           type="text"
           value={user}
           onChange={(e) => setUser(e.target.value)}
-          placeholder='Write a username'
+          placeholder="Write a username"
         />
         <input
           className="input-form-login"
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          placeholder='Write a password'
+          placeholder="Write a password"
         />
         <button className="button-form-login">Submit</button>
       </form>
