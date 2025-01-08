@@ -12,7 +12,8 @@
 }
 
 .p-clock,
-.p-timer {
+.p-timer,
+.p-users {
   text-align: center;
   font-size: 22px;
 }
@@ -51,4 +52,18 @@
 .btn-false {
   background: transparent;
   border: 1px solid lightcoral;
+}
+
+.ol-users {
+  margin: auto;
+  padding: 1rem;
+  width: 100%;
+  max-width: 300px;
+
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+
+  border: 2px solid lightcoral;
 }
