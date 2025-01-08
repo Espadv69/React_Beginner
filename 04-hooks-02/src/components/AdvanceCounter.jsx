@@ -32,6 +32,7 @@ export const AdvanceCounter = () => {
 
   return (
     <div>
+      <h1 className="h1-title">Advance Counter</h1>
       <p className="p-counter">{state.count}</p>
       <div className="buttons-container">
         <button type="button" className="btn-counter" onClick={handleIncrement}>Increment</button>
