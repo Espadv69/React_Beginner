@@ -5,6 +5,11 @@
 }
 
 body {
+  min-height: 100dvh;
+
+  display: grid;
+  place-content: center;
+
   color: whitesmoke;
   background: #121212;
 }
