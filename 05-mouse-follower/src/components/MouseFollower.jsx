@@ -18,6 +18,12 @@ export const MouseFollower = () => {
     if (enabled) {
       window.addEventListener('mousemove', handleMouseMove)
     }
+
+    return () => {
+      console.log('cleanup enabled:', enabled)
+      window.removeEventListener('mousemove', handleMouseMove)
+      setPosition({ x: 0, y: 0 })
+    }
   }, [enabled])
 
   const handleButtonClick = () => {
