@@ -6,8 +6,8 @@ export const MouseFollower = () => {
   const [enabled, setEnabled] = useState(false)
 
   useEffect(() => {
-    console.log('MouseFollower mounted')
-  }, [])
+    console.log('useEffect enabled:', enabled)
+  }, [enabled])
 
   const handleButtonClick = () => {
     setEnabled(!enabled)
@@ -20,7 +20,11 @@ export const MouseFollower = () => {
   return (
     <div>
       <h1>Mouse Follower</h1>
-      <button onClick={handleButtonClick} className={classButton()}>
+      <button
+        type="button"
+        onClick={handleButtonClick}
+        className={classButton()}
+      >
         {enabled ? 'Deactivate' : 'Activate'}
       </button>
     </div>
