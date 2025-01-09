@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
 
+import '../css/Components.css'
+
 export const MouseFollower = () => {
   const [enabled, setEnabled] = useState(false)
 
