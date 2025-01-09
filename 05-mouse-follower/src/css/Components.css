@@ -1,0 +1,12 @@
+.btn-follower {
+  width: 100%;
+  max-width: 220px;
+
+  padding: .4rem;
+
+  border: 1px solid currentColor;
+  border-radius: 4px;
+
+  color: currentColor;
+  background: #000;
+}
