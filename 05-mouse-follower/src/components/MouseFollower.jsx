@@ -7,6 +7,13 @@ export const MouseFollower = () => {
 
   useEffect(() => {
     console.log('useEffect enabled:', enabled)
+
+    const handleMouseMove = (e) => {
+      const { clientX, clientY } = e
+      console.log('clientX:', clientX, 'clientY:', clientY)
+    }
+
+    window.addEventListener('mousemove', handleMouseMove)
   }, [enabled])
 
   const handleButtonClick = () => {
