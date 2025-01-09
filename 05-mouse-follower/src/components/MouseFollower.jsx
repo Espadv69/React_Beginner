@@ -19,6 +19,7 @@ export const MouseFollower = () => {
 
   return (
     <div>
+      <div className="ball-follower"></div>
       <h1>Mouse Follower</h1>
       <button
         type="button"
