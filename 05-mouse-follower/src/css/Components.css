@@ -8,5 +8,9 @@
   border-radius: 4px;
 
   color: currentColor;
-  background: #000;
+  background: red;
+}
+
+.deactivated {
+  background: green;
 }
