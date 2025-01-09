@@ -14,7 +14,7 @@ export const MouseFollower = () => {
   return (
     <div>
       <h1>Mouse Follower</h1>
-      <button onClick={handleButtonClick}>
+      <button onClick={handleButtonClick} className='btn-follower'>
         {enabled ? 'Disable pointer follower' : 'Enabled pointer follower'}
       </button>
     </div>
