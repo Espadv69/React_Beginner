@@ -11,9 +11,7 @@ export const MouseFollower = () => {
     <div>
       <h1>Mouse Follower</h1>
       <button>
-        {enabled
-          ? 'Disable pointer follower'
-          : 'Enabled pointer follower'}
+        {enabled ? 'Disable pointer follower' : 'Enabled pointer follower'}
       </button>
     </div>
   )
