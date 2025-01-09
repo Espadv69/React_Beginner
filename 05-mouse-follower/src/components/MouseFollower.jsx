@@ -41,7 +41,7 @@ export const MouseFollower = () => {
         style={{
           transform: `translate(${position.x}px, ${position.y}px)`,
         }}
-      ></div>
+      />
       <h1>Mouse Follower</h1>
       <button
         type="button"
