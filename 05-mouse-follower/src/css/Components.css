@@ -1,3 +1,19 @@
+.ball-follower {
+  pointer-events: none;
+
+  height: 40px;
+  width: 40px;
+
+  position: absolute;
+  left: -20%;
+  top: -20%;
+
+  border-radius: 50%;
+
+  background: #0099ff;
+  opacity: .8;
+}
+
 .btn-follower {
   width: 100%;
   max-width: 220px;
