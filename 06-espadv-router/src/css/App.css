@@ -22,7 +22,7 @@
   color: lightcoral;
 }
 
-.button-spa {
+/* .button-spa {
   cursor: pointer;
 
   text-transform: uppercase;
@@ -44,7 +44,7 @@
 
   color: lightgreen;
   background: transparent;
-}
+} */
 
 .div-about {
   display: flex;
