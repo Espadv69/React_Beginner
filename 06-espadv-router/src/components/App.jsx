@@ -7,6 +7,7 @@ function navigateTo(href) {
   window.history.pushState({}, '', href)
   // Create a personalized event
   const navEvent = new Event(NAVIGATION_EVENT)
+  window.dispatchEvent(navEvent)
 }
 
 function HomePage() {
