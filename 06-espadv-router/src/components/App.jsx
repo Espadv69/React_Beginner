@@ -36,6 +36,8 @@ function Router({
       window.removeEventListener(EVENTS.POPSTATE, onLocationChange)
     }
   }, [])
+
+  const page = routes.find({ path } => path === currentPath)?.component
 }
 
 export const App = () => {
