@@ -8,7 +8,18 @@ export function navigateTo(href) {
 }
 
 export function Link({ target, to, ...props }) {
-  const handleClick = (e) => {}
+  const handleClick = (e) => {
+    e.preventDefault()
+    navigateTo(to)
+  }
 
-  return <a onClick={handleClick}></a>
+  return (
+    <a
+      className="a-spa"
+      onClick={handleClick}
+      href={to}
+      target={target}
+      {...props}
+    />
+  )
 }
