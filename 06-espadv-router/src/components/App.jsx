@@ -6,6 +6,16 @@ import AboutPage from '../pages/About.jsx'
 import { EVENTS } from '../consts.js'
 import '../css/App.css'
 
+const routes = [
+  {
+    path: '/',
+    component: HomePage,
+  },
+  {
+    path: '/about',
+    component: AboutPage,
+  },
+]
 export const App = () => {
   const [currentPath, setCurrentPath] = useState(window.location.pathname)
 
