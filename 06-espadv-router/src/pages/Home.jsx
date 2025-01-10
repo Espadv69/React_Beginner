@@ -1,6 +1,6 @@
 import { navigateTo } from '../components/App.jsx'
 
-export function HomePage() {
+export default function HomePage() {
   return (
     <>
       <h1 className="h1-title">Home</h1>
