@@ -6,17 +6,6 @@ import AboutPage from '../pages/About.jsx'
 import { EVENTS } from '../consts.js'
 import '../css/App.css'
 
-const routes = [
-  {
-    path: '/',
-    component: HomePage,
-  },
-  {
-    path: '/about',
-    component: AboutPage,
-  },
-]
-
 function Router({
   routes = [],
   defaultComponent: DefaultComponent = () => null,
@@ -37,9 +26,27 @@ function Router({
     }
   }, [])
 
-  const page = routes.find({ path } => path === currentPath)?.component
+  const route = routes.find(({ path }) => path === currentPath) // Corregido
+  const Page = route ? route.component : DefaultComponent // Obtener el componente asociado
+  return <Page />
 }
 
 export const App = () => {
-  return <div></div>
+  return (
+    <div>
+      <Router
+        routes={[
+          {
+            path: '/',
+            component: HomePage,
+          },
+          {
+            path: '/about',
+            component: AboutPage,
+          },
+        ]}
+        defaultComponent={() => <div>404 Not Found</div>} // Componente por defecto
+      />
+    </div>
+  )
 }
