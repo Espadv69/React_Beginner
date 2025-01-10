@@ -1,33 +1,19 @@
 import { useState, useEffect } from 'react'
+
+import { HomePage } from '../pages/Home.jsx'
 import { EVENTS } from '../consts.js'
 import '../css/App.css'
 
 const NAVIGATION_EVENT = 'pushState'
 
-function navigateTo(href) {
+export function navigateTo(href) {
   window.history.pushState({}, '', href)
   // Create a personalized event
   const navEvent = new Event(EVENTS.PUSHSTATE)
   window.dispatchEvent(navEvent)
 }
 
-function HomePage() {
-  return (
-    <>
-      <h1 className="h1-title">Home</h1>
-      <p className="p-spa">
-        This is an example page for creating a React Router from scratch.
-      </p>
-      <button
-        type="button"
-        onClick={() => navigateTo('/about')}
-        className="a-spa"
-      >
-        About us
-      </button>
-    </>
-  )
-}
+
 
 function AboutPage() {
   return (
