@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { EVENTS } from '../consts.js'
 import '../css/App.css'
 
 const NAVIGATION_EVENT = 'pushState'
@@ -6,7 +7,7 @@ const NAVIGATION_EVENT = 'pushState'
 function navigateTo(href) {
   window.history.pushState({}, '', href)
   // Create a personalized event
-  const navEvent = new Event(NAVIGATION_EVENT)
+  const navEvent = new Event(EVENTS.PUSHSTATE)
   window.dispatchEvent(navEvent)
 }
 
@@ -57,12 +58,12 @@ export const App = () => {
       setCurrentPath(window.location.pathname)
     }
 
-    window.addEventListener(NAVIGATION_EVENT, onLocationChange)
-    window.addEventListener('popstate', onLocationChange)
+    window.addEventListener(EVENTS.PUSHSTATE, onLocationChange)
+    window.addEventListener(EVENTS.POPSTATE, onLocationChange)
 
     return () => {
-      window.removeEventListener(NAVIGATION_EVENT, onLocationChange)
-      window.removeEventListener('popstate', onLocationChange)
+      window.removeEventListener(EVENTS.PUSHSTATE, onLocationChange)
+      window.removeEventListener(EVENTS.POPSTATE, onLocationChange)
     }
   }, [])
 
