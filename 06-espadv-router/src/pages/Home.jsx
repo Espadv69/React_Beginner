@@ -10,7 +10,7 @@ export default function HomePage() {
       <button
         type="button"
         onClick={() => navigateTo('/about')}
-        className="a-spa"
+        className="button-spa"
       >
         About us
       </button>
