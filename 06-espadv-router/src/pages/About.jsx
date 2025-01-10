@@ -14,7 +14,11 @@ export default function AboutPage() {
           Hello!, I'm Espadv and i'm creating a clon of React router.
         </p>
       </div>
-      <button onClick={() => navigateTo('/')} className="a-spa">
+      <button
+        type="button"
+        onClick={() => navigateTo('/')}
+        className="button-spa"
+      >
         Home
       </button>
     </>
