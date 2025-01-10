@@ -16,7 +16,11 @@ const routes = [
     component: AboutPage,
   },
 ]
-export const App = () => {
+
+function Router({
+  routes = [],
+  defaultComponent: DefaultComponent = () => null,
+}) {
   const [currentPath, setCurrentPath] = useState(window.location.pathname)
 
   useEffect(() => {
@@ -32,11 +36,8 @@ export const App = () => {
       window.removeEventListener(EVENTS.POPSTATE, onLocationChange)
     }
   }, [])
+}
 
-  return (
-    <div>
-      {currentPath === '/' && <HomePage />}
-      {currentPath === '/about' && <AboutPage />}
-    </div>
-  )
+export const App = () => {
+  return <div></div>
 }
