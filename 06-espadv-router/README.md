@@ -1,6 +1,6 @@
 # Create a REACT Router from Scratch
 
-- [ ] Install ESLint  
+- [x] Install ESLint  
 - [ ] Build a way to create SPAs (Single Page Applications)  
 - [ ] Enable navigation between pages with the back button  
 - [ ] Create a `Link` component for declarative navigation  
