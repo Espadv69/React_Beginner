@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import '../css/App.css'
 
 function HomePage() {
@@ -36,10 +37,12 @@ function AboutPage() {
 }
 
 export const App = () => {
+  const [currentPath, setCurrentPath] = useState(window.location.pathname)
+
   return (
     <div>
-      <HomePage />
-      <AboutPage />
+      {currentPath === '/' && <HomePage />}
+      {currentPath === '/about' && <AboutPage />}
     </div>
   )
 }
