@@ -1,0 +1,37 @@
+.h1-title {
+  margin-bottom: 15px;
+  margin-top: 15px;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  letter-spacing: 4px;
+}
+
+.p-spa {
+  text-align: center;
+  font-size: 17px;
+}
+
+.a-spa {
+  display: flex;
+  justify-self: center;
+  align-self: center;
+
+  text-decoration: none;
+  color: lightcoral;
+}
+
+.div-about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-spa {
+  width: 100px;
+  height: 100px;
+
+  border-radius: 50%;
+}
