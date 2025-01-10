@@ -8,7 +8,8 @@
     "02-tic-tac-toe",
     "03-hooks-01",
     "04-hooks-02",
-    "05-mouse-follower"
+    "05-mouse-follower",
+    "06-espadv-router"
   ],
   "scripts": {
     "start:00-hello-world": "npm run dev --workspace=00-hello-world",
@@ -16,7 +17,8 @@
     "start:02-tic-tac-toe": "npm run dev --workspace=02-tic-tac-toe",
     "start:03-hooks-01": "npm run dev --workspace=03-hooks-01",
     "start:04-hooks-02": "npm run dev --workspace=04-hooks-02",
-    "start:05-mouse-follower": "npm run dev --workspace=05-mouse-follower"
+    "start:05-mouse-follower": "npm run dev --workspace=05-mouse-follower",
+    "start:06-espadv-router": "npm run dev --workspace=06-espadv-router"
   },
   "dependencies": {
     "canvas-confetti": "1.9.3"
