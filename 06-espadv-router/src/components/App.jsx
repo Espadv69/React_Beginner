@@ -6,13 +6,6 @@ import { AboutPage } from '../pages/About.jsx'
 import { EVENTS } from '../consts.js'
 import '../css/App.css'
 
-export function navigateTo(href) {
-  window.history.pushState({}, '', href)
-  // Create a personalized event
-  const navEvent = new Event(EVENTS.PUSHSTATE)
-  window.dispatchEvent(navEvent)
-}
-
 export const App = () => {
   const [currentPath, setCurrentPath] = useState(window.location.pathname)
 
