@@ -1,6 +1,14 @@
 import { useState } from 'react'
 import '../css/App.css'
 
+const NAVIGATION_EVENT = 'pushState'
+
+function navigateTo(href) {
+  window.history.pushState({}, '', href)
+  // Create a personalized event
+  const navEvent = new Event(NAVIGATION_EVENT)
+}
+
 function HomePage() {
   return (
     <>
