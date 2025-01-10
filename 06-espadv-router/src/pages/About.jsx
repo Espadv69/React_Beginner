@@ -1,4 +1,4 @@
-import { navigateTo } from '../components/Link.jsx'
+import { Link } from '../components/Link.jsx'
 
 export default function AboutPage() {
   return (
@@ -14,13 +14,7 @@ export default function AboutPage() {
           Hello!, I'm Espadv and i'm creating a clon of React router.
         </p>
       </div>
-      <button
-        type="button"
-        onClick={() => navigateTo('/')}
-        className="button-spa"
-      >
-        Home
-      </button>
+      <Link to="/">Home</Link>
     </>
   )
 }
