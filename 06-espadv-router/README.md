@@ -2,7 +2,7 @@
 
 - [x] Install ESLint  
 - [x] Build a way to create SPAs (Single Page Applications)  
-- [ ] Enable navigation between pages with the back button  
+- [x] Enable navigation between pages with the back button  
 - [ ] Create a `Link` component for declarative navigation  
 - [ ] Create a `Router` component to make routing more declarative  
 - [ ] Support a default route (404)  
