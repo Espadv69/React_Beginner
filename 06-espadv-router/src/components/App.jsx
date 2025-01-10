@@ -17,9 +17,13 @@ function HomePage() {
       <p className="p-spa">
         This is an example page for creating a React Router from scratch.
       </p>
-      <a href="/about" className="a-spa">
+      <button
+        type="button"
+        onClick={() => navigateTo('/about')}
+        className="a-spa"
+      >
         About us
-      </a>
+      </button>
     </>
   )
 }
@@ -38,9 +42,9 @@ function AboutPage() {
           Hello!, I'm Espadv and i'm creating a clon of React router.
         </p>
       </div>
-      <a href="/" className="a-spa">
+      <button onClick={() => navigateTo('/')} className="a-spa">
         Home
-      </a>
+      </button>
     </>
   )
 }
