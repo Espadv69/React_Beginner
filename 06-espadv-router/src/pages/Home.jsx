@@ -1,4 +1,4 @@
-import { navigateTo } from '../components/Link.jsx'
+import { Link } from '../components/Link.jsx'
 
 export default function HomePage() {
   return (
@@ -7,13 +7,7 @@ export default function HomePage() {
       <p className="p-spa">
         This is an example page for creating a React Router from scratch.
       </p>
-      <button
-        type="button"
-        onClick={() => navigateTo('/about')}
-        className="button-spa"
-      >
-        About us
-      </button>
+      <Link to="/about">About us</Link>
     </>
   )
 }
