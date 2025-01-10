@@ -1,2 +1,11 @@
 import '../css/App.css'
-export const App = () => {}
+function HomePage() {
+  return <h1>Home Page</h1>
+}
+export const App = () => {
+  return (
+    <div>
+      <HomePage />
+    </div>
+  )
+}
