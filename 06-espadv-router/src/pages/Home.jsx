@@ -1,4 +1,4 @@
-import { navigateTo } from '../components/App.jsx'
+import { navigateTo } from '../components/Link.jsx'
 
 export default function HomePage() {
   return (
