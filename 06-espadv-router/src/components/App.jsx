@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 
-import { HomePage } from '../pages/Home.jsx'
-import { AboutPage } from '../pages/About.jsx'
+import HomePage from '../pages/Home.jsx'
+import AboutPage from '../pages/About.jsx'
 
 import { EVENTS } from '../consts.js'
 import '../css/App.css'
