@@ -22,6 +22,30 @@
   color: lightcoral;
 }
 
+.button-spa {
+  cursor: pointer;
+
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: 600;
+
+  padding: .5rem;
+  margin-top: 15px;
+
+  width: 100%;
+  max-width: 140px;
+
+  display: flex;
+  justify-self: center;
+  justify-content: center;
+
+  border: 1px solid lightgreen;
+  border-radius: 5px;
+
+  color: lightgreen;
+  background: transparent;
+}
+
 .div-about {
   display: flex;
   flex-direction: column;
