@@ -9,7 +9,8 @@
     "03-hooks-01",
     "04-hooks-02",
     "05-mouse-follower",
-    "06-espadv-router"
+    "06-SPA",
+    "07-google-translate-clone"
   ],
   "scripts": {
     "start:00-hello-world": "npm run dev --workspace=00-hello-world",
@@ -18,7 +19,8 @@
     "start:03-hooks-01": "npm run dev --workspace=03-hooks-01",
     "start:04-hooks-02": "npm run dev --workspace=04-hooks-02",
     "start:05-mouse-follower": "npm run dev --workspace=05-mouse-follower",
-    "start:06-espadv-router": "npm run dev --workspace=06-espadv-router"
+    "start:06-SPA": "npm run dev --workspace=06-SPA",
+    "start:07-google-translate-clone": "npm run dev --workspace=07-google-translate-clone"
   },
   "dependencies": {
     "canvas-confetti": "1.9.3"
